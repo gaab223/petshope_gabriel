@@ -35,5 +35,5 @@ Pet shop Master é uma pagina web para compra de produtos para pet, dedicada a s
 
 
 ## 🚀 Sobre mim
-Óla, me chamo Thiago Bastos e sou um estudante de desenvolvimento de sistemas em processo de aprendizagem, esta página por mais simples e quase sem interações pra mim significa muito pra mim, pois marca meu aprendizado e meu desenvolvimento como programador, ainda sou iniciante, mais ainda um dia serei um exelente programador.  
+Óla, me chamo Gabriel Oliveira e sou um estudante de desenvolvimento de sistemas em processo de aprendizagem, esta página por mais simples e quase sem interações pra mim significa muito pra mim, pois marca meu aprendizado e meu desenvolvimento como programador, ainda sou iniciante, infelizmente nao tenho muito tempo disponivel por isso sou um dos mais atrasados da turma, mais ainda um dia serei um exelente programador.  
 

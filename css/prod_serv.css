@@ -20,7 +20,7 @@ header{
     flex-wrap: nowrap;
 }
 body {
-    background-color: rgb(243, 199, 199);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(209,101,255,1) 66%);
 }
 
 .info_cab a {
