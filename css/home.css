@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(209,101,255,1) 66%);
+    width: 100%;
+    height: 10vh;
+}
+
+.info_cab {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+   
+}
+
+.info_cab a {
+    color:rgb(253, 162, 230);
+    text-decoration: none;
+    padding: 10px;
+    white-space: nowrap;
+    transition: 0.3s all ease;
+    font-weight: bold;
+}
+
+.info_cab a:hover{
+    transform: scale(1.2);
+}
+
+.busca{
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+.busca input {
+    border-radius: 10px;
+    border-color: rgb(253, 152, 228);
+    height: 20px;
+    padding-left: 10px;
+    width: 100%;
+    outline: none;
+    background-color: rgb(248, 247, 247);
+}
+
+.carousel {
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 1%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.Op_Prod{   
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Op_Prod {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(209,101,255,1) 50%, rgba(255,255,255,1) 100%);
+}
+
+.Op_Prod a {
+    text-decoration: none;
+    color:  rgb(0, 0, 0);
+    padding: 8px;
+    font-weight: bold;
+    transition: 0.3s all ease;
+}
+
+.Op_Prod a:hover{
+    transform: scale(1.1);
+}
+
+.boasvindas {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.boasvindas img {
+    width: 600px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+   
+}
+
+.bv {
+    text-align: center;
+    width: 100%;
+    background-color: rgb(243, 199, 199);
+}
+
+.pro_dstc {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.seta {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1001;
+}
+
+.seta img {
+    width: 50px;
+}
+
+.produtos {
+    margin-top:-200px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.img{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.produtos button {
+    background-color: green;
+    border-radius: 8px;
+    color: white;
+    border: 0;
+    width: 80%;
+    height: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px;
+    z-index: 1000;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button {
+    background-color: #4CAF50; /* Cor de fundo inicial */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Transição suave */
+}
+
+button:active {
+    transform: scale(0.95); 
+    background-color: #3e8e41; 
+}
+.Prod {
+    display: flex;              
+    flex-direction: column;     
+    justify-content: center;    
+    align-items: center;        
+    width: 300px;
+    height: 300px;
+    background-color: #fae9ec;
+    border-radius: 12px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.26);
+    padding: 20px;
+}
+.Prod h2 {
+    font-size: 14px;
+}
+
+.Prod img {
+
+    width: auto;
+    height: 100px;
+}
+
+.avaliação {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(209,101,255,1) 18%, rgba(209,101,255,1) 71%, rgba(255,255,255,1) 100%);
+    padding: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(auto-fit, 100px);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.cmt {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.info_cttD, .info_cttC, .info_cttE {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.info_cttE a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .produtos {
+        margin-top: 50px;
+    }
+
+    .bv{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 5px;
+    }
+
+    .pro_dstc{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .bv{
+        flex-direction: column;
+        height: auto;
+    }
+    .seta{
+        display: none;
+    }
+
+    .busca {
+        width: 100%;
+    }
+
+    .produtos {
+        flex-direction: column;
+        margin-top: -150px;
+        padding: 0 10px;
+    }
+
+    .Prod {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .seta {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .seta img {
+        margin: 10px 0;
+    }
+
+    .info_cttD, .info_cttC, .info_cttE {
+        justify-content: center;
+        text-align: center;
+    }
+}
