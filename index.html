@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuperPets.com.br</title>
-    <link rel="icon" type="imagem/x-icon" href="/post logotop.png">
+    <link rel="icon" type="imagem/x-icon" href="/petshope_gabriel/img/post logotop.png">
     <link rel="stylesheet" href="css/home.css">
 </head>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="/post logotop.png" alt="Logo do Pet Shop" width="120"></a> 
+            <a href="index.html"><img src="/petshope_gabriel/img/post logotop.png" alt="Logo do Pet Shop" width="120"></a> 
         </div>
         <div class="busca">
             <input type="text" id="busca" placeholder="buscar">
-            <div class="lupa"><img src="/img/luparose.png" width="35"></div>
+            <div class="lupa"><img src="/petshope_gabriel/img/lupaRose.png" width="35"></div>
         </div>
     <div class="info_cab">
-        <a href="index.html"><img src="/post bonequinho.png" width="45"></a>
+        <a href="index.html"><img src="/petshope_gabriel/img/post bonequinho.png" width="45"></a>
         <a href="forms_ctt.html">Contato</a>
         <a href="sobreNos.html">Sobre nos</a>
-        <a href="carrinho.html"><img src="/img/carrinho.png" width="35"></a>
+        <a href="carrinho.html"><img src="/petshope_gabriel/img/carrinho.png" width="35"></a>
     </div> 
     </header>
 
@@ -32,9 +32,9 @@
     
     <div class="carousel">
         <div class="carousel-images">
-            <img src="/img/Post super pets.png" alt="Imagem 1">
-            <img src="/img/slideshow carusel 2.png" alt="Imagem 2">
-            <img src="/2.png" alt="Imagem 3">
+            <img src="/petshope_gabriel/img/Post super pets.png" alt="Imagem 1">
+            <img src="/petshope_gabriel/img/slideshow carusel 2.png" alt="Imagem 2">
+            <img src="/petshope_gabriel/img/2.png" alt="Imagem 3">
             
         </div>
     </div>
@@ -52,7 +52,7 @@
 
         setInterval(showNextImage, 3000); // Muda de imagem a cada 3 segundos
     </script>
-
+    
     <body>
         <div class="pro_dstc">
             <h2>Produtos em destaque</h2>
@@ -62,10 +62,11 @@
             </div>
             <div class="produtos">
                 <div class="Prod">
-                    <div class="img"><img src="img/ração pra dog.jpg" alt="Imagem"width="70"></img></div>
+                    <div class="img"><img src="img/ração pra dog.jpg" alt="Imagem" width="70"></div>
                     <h2>Premier Pet Golden Special - Ração para Cães Adultos, Sabor Frango e Carne, 15kg</h2>
                     <p>R$64,68</p>
-                    <button>Comprar</button>
+                    <button class="btn-comprar" data-id="1" data-name="Premier Pet Golden Special" data-price="64.68">Comprar</button>
+                </div>          
                 </div>
                 <div class="Prod">
                     <div class="img"><img src="img/ração pra dog2.jpg" alt="Imagem"width="70"></img></div>
@@ -97,8 +98,54 @@
                     <p>R$ 129,99</p>
                     <button>Comprar</button>
                 </div>    
+
+                
             </div>
         </div>
+    
+        <script>
+            // Função para adicionar ao carrinho
+            function addToCart(item) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                
+                // Verifica se o item já está no carrinho
+                const existingItem = cart.find(cartItem => cartItem.id === item.id);
+                
+                if (existingItem) {
+                    // Se o item já estiver no carrinho, aumenta a quantidade
+                    existingItem.quantity += 1;
+                } else {
+                    // Caso contrário, adiciona o item ao carrinho com quantidade 1
+                    item.quantity = 1;
+                    cart.push(item);
+                }
+                
+                // Atualiza o Local Storage
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
+        
+            // Adiciona o evento de clique aos botões de comprar
+            document.querySelectorAll('.btn-comprar').forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    const name = this.getAttribute('data-name');
+                    const price = this.getAttribute('data-price');
+                    
+                    // Cria um objeto do item
+                    const item = {
+                        id: id,
+                        name: name,
+                        price: price
+                    };
+                    
+                    // Adiciona o item ao carrinho
+                    addToCart(item);
+                    
+                    alert(`${name} foi adicionado ao carrinho!`);
+                });
+            });
+        </script>
+        
     </body>
     <section class="avaliação">
         <div class="cmt">
